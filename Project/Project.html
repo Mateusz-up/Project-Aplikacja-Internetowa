@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Automotive Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+<link href="style.css" rel="stylesheet" type="text/css" />
+  
+ 
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<a id="button" title="Click to return on the top page"></a>
+<div class="container mt-3">
+
+
+<br>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">  
+ 
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="nav navbar-tabs">
+  <li class="nav-item">
+       <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+  
+    <li class="nav-item">
+      <a class="nav-link   " data-toggle="tab" href="#cars">Cars</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#bikes">Bikes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#motorbikes">Motorbikes</a>
+    </li>
+	  <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#cone">Cone</a>
+    </li>
+  
+  </ul>
+    </div> 
+</nav>
+
+<div class="tab-content">
+
+ <div id="home" class="container tab-pane active"><br>
+<div class="row">
+			<div class="col offset-3 text-warning" ><h1>Welcome to Automotive Store</h1></div>
+		</div>
+  <div class="row">
+			<div class="col offset-2 text-info">
+			
+			
+			<h2>On this page you can show cars bikes and motorbikes</h2></div>
+			
+			
+ 
+</div>
+
+ <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500" data-pause="hover" data-keyboard="true">
+
+  <br>
+  
+  
+ 
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="https://foto.scigacz.pl/cache/imgs/_w720/gallery/mod_static/Harley-Davidson-Fat-Boy-Special_18907_1.jpg" data-toggle="tooltip" title="Harley-Davidson  Fat Boy Special" class="mx-auto d-block" style="width:50% " >
+    </div>
+    <div class="carousel-item">
+<img class="img-fluid" src="https://rower.com.pl/images/cache/0/05b90a57d7b5a6db7d2e3b643c42eb14.image.750x500.jpg" data-toggle="tooltip" title="UNIVEGA ALPINA	3.0" class="mx-auto d-block" style="width:50%">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/640x400/quality/80/https://s.aolcdn.com/commerce/autodata/images/USC90BMC681A021001.jpg" data-toggle="tooltip" title="BMW	I8" class="mx-auto d-block"  style="width:50%">
+    </div>
+	
+	<br><br>
+  </div>
+  </div>
+  
+<div class="panel bg-info fixed-bottom">
+ 
+  <div class="panel-footer form-group text-center"><strong>Final Project</strong></div>
+</div>
+</div>
+  <br>
+  
+
+<div id="motorbikes" class="container tab-pane fade"><br>
+
+
+					
+		<div class="col offset-5 text-info" ><h2>Motorbikes</h2></div>
+		
+ 
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for Mark or Name:</p>  
+  <input class="form-control" id="myInput3" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>Mark</th>
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="myTable3">
+      <tr>
+        <td>Harley-Davidson</td>
+        <td>Fat Boy Special</td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td>Honda</td>
+        <td>CBR 929RR</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>BMW</td>
+        <td>S1000XR</td>
+        <td></td>
+      </tr>
+	   <tr>
+        <td>SUZUKI</td>
+        <td>KATANA</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<br><br>
+
+<script>
+$(document).ready(function(){
+  $("#myInput3").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable3 tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500" data-pause="hover" data-keyboard="true">
+
+  <br>
+  
+  
+ 
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="https://foto.scigacz.pl/cache/imgs/_w720/gallery/mod_static/Harley-Davidson-Fat-Boy-Special_18907_1.jpg" data-toggle="tooltip" title="Harley-Davidson  Fat Boy Special" class="mx-auto d-block" style="width:50% " >
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://foto.scigacz.pl/cache/imgs/_w720/gallery/mod_static/Honda-CBR-929RR_19034_1.jpg" data-toggle="tooltip" title="Honda CBR 929RR " class="mx-auto d-block"  style="width:50%">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://foto.scigacz.pl/cache/imgs/_w720/gallery/mod_static/BMW-S1000XR_19101_1.jpg" data-toggle="tooltip" title="BMW	S1000XR" class="mx-auto d-block"  style="width:50%">
+    </div>
+	<div class="carousel-item">
+      <img class="img-fluid" src="https://foto.scigacz.pl/cache/imgs/_c400x300/gallery/mod_static/Suzuki-Katana_19449_1.jpg" data-toggle="tooltip" title="SUZUKI KATANA" class="mx-auto d-block"  style="width:50%" >
+    </div>
+	<br><br>
+  </div>
+  </div>
+  
+  
+  
+</div>
+
+<div id="bikes" class="container tab-pane fade"><br>
+
+
+					
+		<div class="col offset-5 text-info" ><h2>Bikes</h2></div>
+		
+ 
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for Mark or Name:</p>  
+  <input class="form-control" id="myInput2" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Mark</th>
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="myTable2">
+      <tr>
+        <td>Kross</td>
+        <td>Hexagon 2.0</td>
+        <td></td>
+      </tr>
+      <tr> 
+        <td>GT</td>
+        <td>Grade CX</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Winora</td>
+        <td>Domigo</td>
+        <td></td>
+      </tr>
+	   <tr>
+        <td>AUTHOR</td>
+        <td>THEMA 700</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<br><br><script>
+$(document).ready(function(){
+  $("#myInput2").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable2 tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="500" data-pause="hover" data-keyboard="true">
+
+  <br>
+  
+  
+ 
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="https://rower.com.pl/images/cache/7/70c4df24b01b177d9829f104e3ec3d5b.image.750x571.png" data-toggle="tooltip" title="Kross Hexagon 2.0" class="mx-auto d-block" width="900" height="500"  >
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://rower.com.pl/images/cache/0/05b90a57d7b5a6db7d2e3b643c42eb14.image.750x500.jpg" data-toggle="tooltip" title="UNIVEGA ALPINA	3.0" class="mx-auto d-block" width="900" height="500">
+    </div>
+    <div class="carousel-item">
+      <img class="img-fluid" src="https://rower.com.pl/images/cache/2/2b2d63859102c627ccf961b4fa5e4371.image.750x500.png" data-toggle="tooltip" title="Winora	Domingo" class="mx-auto d-block" width="900" height="500">
+    </div>
+	<div class="carousel-item">
+      <img class="img-fluid" src="https://rower.com.pl/images/produkty/2082594.JPG" data-toggle="tooltip" title="AUTHOR	THEMA 700" class="mx-auto d-block" width="900" height="500" >
+    </div>
+	
+  </div>
+  </div>
+  
+  
+  
+</div>
+
+<div id="cars" class="container tab-pane fade"><br>
+
+					
+		<div class="col offset-5 text-info" ><h2>Cars</h2></div>
+		
+  
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for Mark or Name:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+       
+        <th>Mark</th>
+        <th>Name</th>
+		 <th></th>
+      </tr>
+    </thead>
+     <tbody id="myTable">
+     <tr class="table-info">
+        <td>BMW</td>
+        <td>I8</td>
+        <td></td>
+      </tr>
+       <tr class="table-success">
+        <td>Audi</td>
+        <td>RS5</td>
+        <td></td>
+      </tr>
+      <tr class="table-dark">
+        <td>CITROEN</td>
+        <td>C5</td>
+        <td></td>
+      </tr>
+      <tr class="table-danger">
+        <td>HYUNDAI</td>
+        <td>GENESIS</td>
+        <td></td>
+      </tr>
+      <tr class="table-info">
+        <td>SUZUKI </td>
+        <td>SWIFT</td>
+        <td></td>
+      </tr>
+      <tr class="table-warning">
+        <td>VOLKSWAGEN</td>
+        <td>SANTANA</td>
+        <td></td>
+      </tr>
+      
+     
+    </tbody>
+  </table>
+		
+		
+
+	
+
+		
+
+   
+	
+					
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="900">
+
+  
+  <ul class="carousel-indicators ">
+    <li class="bg-danger" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li  class="bg-danger" data-target="#myCarousel" data-slide-to="1"></li>
+    <li  class="bg-danger" data-target="#myCarousel" data-slide-to="2"></li>
+	<li  class="bg-danger" data-target="#myCarousel" data-slide-to="3"></li>
+	<li  class="bg-danger" data-target="#myCarousel" data-slide-to="4"></li>
+	<li  class="bg-danger" data-target="#myCarousel" data-slide-to="5"></li>
+  </ul>
+  
+  <br><br>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/x46k9ktY2FyQ2F0YWxvZ3VlL2FjYmY0MjEyNzIxYzhjYTk5ODJjNGFmZGVlODRhMjU5kpUDAM0Bl80WgM0MqJMFzPrMh4GhMAE" data-toggle="tooltip" title="BMW I8" class="mx-auto d-block" style="width:50%"  >
+    </div>
+    <div class="carousel-item">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/Ktbk9ktY2FyQ2F0YWxvZ3VlLzg0ZWU3ODQyNGM5NmY3ZGViNDUxODlmNjUxNzNkYzU2kpUDAMzizQUAzQJ5kwXM-syHgaEwAQ" data-toggle="tooltip" title="Audi	RS5" class="mx-auto d-block" style="width:50%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/JDAk9ktY2FyQ2F0YWxvZ3VlLzBjNGI0ZTI1OWMxNWFiNGE5OWM1Yjc3NDU3ZDk5OGFlkpUDAMyrzQRAzQJkkwXM-syHgaEwAQ" data-toggle="tooltip" title="CITROEN	C5" class="mx-auto d-block" style="width:50%">
+    </div>
+	<div class="carousel-item">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/sKzk9ktY2FyQ2F0YWxvZ3VlLzEyYzRjMmUzNGMzMGViNzRkOWViY2MwZThhNGNiNWYxkpUDAMyOzQUAzQLQkwXM-syHgaEwAQ" data-toggle="tooltip" title="HYUNDAI	GENESIS" class="mx-auto d-block" style="width:50%" >
+    </div>
+	<div class="carousel-item">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/Ltok9ktY2FyQ2F0YWxvZ3VlL2FhYjk0YjhkYmFhZWU0NmI4YmJhZTlhZGZkMTYxYTNlkpUDAM0BWs0TIM0KwpMFzPrMh4GhMAE" data-toggle="tooltip" title="SUZUKI	SWIFT" class="mx-auto d-block" style="width:50%" >
+    </div>
+	<div class="carousel-item">
+      <img src="https://ocdn.eu/rankings-content-transforms/1/zHIk9ktY2FyQ2F0YWxvZ3VlL2I0NDZmNjgxYmQ5MzYyZDkzMDY4NGU1MTRmYzVhOGQ2kpUDAMywzQUAzQLQkwXM-syHgaEwAQ" data-toggle="tooltip" title="VOLKSWAGEN	SANTANA" class="mx-auto d-block" style="width:50%" >
+    </div>
+  </div>
+  
+  <br><br>
+  
+  <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+ 
+</div>
+
+
+
+ 	<br><br>
+			
+			
+		</div>
+		
+<div id="cone" class="container tab-pane fade">
+
+					
+		<div class="col offset-2 text-info" ><h2>Calculation of the cone volume and total cone area</h2>
+		</div>
+		<br><br>
+		<div class="row">
+	
+			<div class="col offset-3 text-danger"><h2>Cone calculation</h2></div>
+			
+			
+			
+			
+ </div>
+
+		<form>
+  
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Cone radius</label>
+    <div class="col-sm-10">
+	      <input type="number" class="form-control" id="radius" placeholder="
+Enter the radius value ">
+
+    
+    </div>
+  </div>
+  <br><br>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Cone height</label>
+    <div class="col-sm-10">
+	      <input type="number" class="form-control"id="height" placeholder="
+Enter the cone height ">
+
+
+    
+    </div>
+  </div>
+  <div class="form-group row">
+   <br><br>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Result</label>
+	 <div class="col-sm-10">
+
+          <input type="text" class="form-control" name="total" id="total" value=""  />
+		 
+  </div>
+  </div>
+</form>
+
+<button class="button button1" id="resetTextButton">Clear data</button>
+
+			
+		<br><br><br>
+		<div class="row">
+	<br><br>
+			<div class="col offset-3 text-warning"><h2>Total cone area</h2></div>
+			
+			
+			
+			
+ </div>
+
+		<form class="cmxform" id="commentForm" method="get" action="">
+  
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Cone radius</label>
+    <div class="col-sm-10">
+	      <input type="number" class="form-control"id="radius2" placeholder="
+Enter the radius value">
+
+    
+    </div>
+  </div>
+  <br><br>
+  <div class="form-group row">
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Forming a cone</label>
+    <div class="col-sm-10">
+	      <input type="number" class="form-control"id="forming" placeholder="
+Enter the forming a cone ">
+
+
+    
+    </div>
+  </div>
+  <div class="form-group row">
+   <br><br>
+    <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Result</label>
+	 <div class="col-sm-10">
+
+          <input type="text" class="form-control" name="total" id="total2"  value=""  />
+		 
+  </div>
+  </div>
+</form>
+
+<button class="button button2" id="resetTextButton2">Clear data</button>
+</div>
+
+
+
+
+
+
+	<script>
+var reset = function(e) {
+  e.wrap('<form>').closest('form').get(0).reset();
+  e.unwrap();
+}
+
+
+$('#resetTextButton').click(function(e) {
+  reset($('#height'));
+  e.preventDefault();
+});
+$('#resetTextButton').click(function(e) {
+  reset($('#radius'));
+  e.preventDefault();
+});
+$('#resetTextButton').click(function(e) {
+  reset($('#total'));
+  e.preventDefault();
+});
+</script>
+<script>
+var reset = function(e) {
+  e.wrap('<form>').closest('form').get(0).reset();
+  e.unwrap();
+}
+
+
+$('#resetTextButton2').click(function(e) {
+  reset($('#forming'));
+  e.preventDefault();
+});
+$('#resetTextButton2').click(function(e) {
+  reset($('#radius2'));
+  e.preventDefault();
+});
+$('#resetTextButton2').click(function(e) {
+  reset($('#total2'));
+  e.preventDefault();
+});
+</script>
+ <script>
+	  $(document).ready(function() {
+	
+	    function compute() {
+		
+		
+          var a = $('#radius2').val();
+          var b = $('#forming').val();
+			var t='π';
+			
+			
+		  
+          var total2 = (a*a)+(a*b);
+		 
+          $('#total2').val(total2+t);
+		  
+		 
+
+        }
+
+        $('#radius2, #forming').change(compute);
+		
+		
+	  });
+	</script>
+
+	
+
+	 <script>
+	  $(document).ready(function() {
+	    function compute() {
+		var x =1/3;
+          var a = $('#radius').val();
+          var b = $('#height').val();
+			var t='π';
+		  
+          var total = x *(a*a)*b;
+		  
+          $('#total').val(total+t);
+        }
+
+        $('#radius, #height').change(compute);
+		
+	  });
+	</script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script>
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 50) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '50');
+});
+
+</script>
+
+</body>
+
+</html>
